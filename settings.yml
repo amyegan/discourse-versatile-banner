@@ -16,18 +16,19 @@ display_on_homepage:
 url_must_contain:
   type: list
   list_type: simple
-  default: /c/drafts
+  default: /c/drafts/38
 dismissible:
   type: bool
   default: false
 collapsible:
   type: bool
-  default: false
+  default: true
 default_collapsed_state:
   type: enum
-  default: collapsed
+  default: expanded
   choices:
     - expanded
+    - collapsed
 cookie_lifespan:
   type: enum
   default: none
@@ -105,50 +106,51 @@ first_column_content:
   type: string
   textarea: true
   default: |
-    <h3>A simple box</h3>
+    <h3>Vercel SHIP 2025 | NYC</h3>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Sed id congue eros, sit amet suscipit libero. Nunc vitae
-      placerat est.
+      Vercel SHIP is an in-person and virtual event bringing together Vercel customers, community members, partners, and media attendees to learn about Vercel’s latest product releases.
     </p>
-    <div class="banner-list">
-      <ul>
-        <li><a href="https://twitter.com/discourse" target="_blank">A tweet</a> to wake up my friends</li>
-        <li>Put the photos in the bag</li>
-        <li>Rearrange books in the study</li>
-        <li>And the notes?</li>
-      </ul>
+    <p>
+      Join us as an official sponsor or speak on the main stage <strong>June 24 / 25, 2025</strong> in <strong>New York City</strong>!
+    </p>
+    <div class="buttons" id="my-button">
+      <a href="/t/about-the-drafts-category/148" class="btn btn-icon-text">More details</a>
     </div>
 second_column_content:
   type: string
   textarea: true
   default: |
-    <h3>Another simple box</h3>
-    <p>
-      Integer velit ante,
-      <a href="https://discourse.org">DISCOURSE</a>
-      amet tristique in, gravida at ligula. Sed gravida mauris id
-      neque vestibulum semper. Suspendisse potenti. Nam
-      nec maximus ligula. Ut eget semper est. Sed ornare
-      sit amet justo eu rutrum. Integer sit amet facilisis ipsum.
-    </p>
-    <div class="buttons" id="my-button">
-      <a href="#" class="btn btn-icon-text">My new button</a>
+    <div class="card">
+      <h2 class="banner-title">Vercel SHIP 2025 | NYC</h2>
+      <p>
+        Vercel SHIP is an in-person and virtual event bringing together Vercel customers, community members, partners, and media attendees to learn about Vercel’s latest product releases.
+      </p>
+      <p>
+        Join us as an official sponsor or speak on the main stage <strong>June 24 / 25, 2025</strong> in <strong>New York City</strong>!
+      </p>
+      <div class="buttons" id="my-button">
+        <a href="/t/about-the-drafts-category/148" class="btn btn-icon-text">More details</a>
+      </div>
     </div>
 third_column_content:
   type: string
   textarea: true
   default: |
-    <h3>Yet another simple box</h3>
-    <p>
-      Pellentesque ut lacinia nunc, eu molestie nulla.
-      Pellentesque viverra nisi urna, at hendrerit nisl
-      sodales in. Morbi auctor sodales nisi, eget aliquam
-      justo maximus in. Suspendisse a felis a massa
-      elementum pellentesque quis eget dolor. Orci varius
-      natoque penatibus et magnis dis parturient montes,
-      nascetur ridiculus mus.
-    </p>
+    <div class="card">
+      <h2 class="banner-title">"Shipped on Vercel"</h2>
+      <p>
+        We’re gearing up for a new brand campaign launching next month.
+      </p>
+      <p>
+        We want the focus to be all about our customers, large and emerging, and share their websites and web apps across multiple mediums—landing pages, billboards, blogs, interviews, social.
+      </p>
+      <p>
+        Let us know about your favorite customers or projects.
+      </p>
+      <div class="buttons" id="my-button">
+        <a href="/t/this-is-a-draft-post/150/1" class="btn btn-icon-text">More details</a>
+      </div>
+    </div>
 fourth_column_content:
   type: string
   textarea: true
