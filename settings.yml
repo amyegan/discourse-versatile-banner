@@ -3,7 +3,7 @@ show_for_members:
   default: true
 show_for_anon:
   type: bool
-  default: true
+  default: false
 display_on_mobile:
   type: bool
   default: true
@@ -12,11 +12,11 @@ display_on_desktop:
   default: true
 display_on_homepage:
   type: bool
-  default: true
+  default: false
 url_must_contain:
   type: list
   list_type: simple
-  default: /c/drafts/38
+  default: /c/partners/49
 dismissible:
   type: bool
   default: false
@@ -106,20 +106,6 @@ first_column_content:
   type: string
   textarea: true
   default: |
-    <h3>Vercel SHIP 2025 | NYC</h3>
-    <p>
-      Vercel SHIP is an in-person and virtual event bringing together Vercel customers, community members, partners, and media attendees to learn about Vercel’s latest product releases.
-    </p>
-    <p>
-      Join us as an official sponsor or speak on the main stage <strong>June 24 / 25, 2025</strong> in <strong>New York City</strong>!
-    </p>
-    <div class="buttons" id="my-button">
-      <a href="/t/about-the-drafts-category/148" class="btn btn-icon-text">More details</a>
-    </div>
-second_column_content:
-  type: string
-  textarea: true
-  default: |
     <div class="card">
       <h2 class="banner-title">Vercel SHIP 2025 | NYC</h2>
       <p>
@@ -132,7 +118,7 @@ second_column_content:
         <a href="/t/about-the-drafts-category/148" class="btn btn-icon-text">More details</a>
       </div>
     </div>
-third_column_content:
+second_column_content:
   type: string
   textarea: true
   default: |
@@ -151,6 +137,10 @@ third_column_content:
         <a href="/t/this-is-a-draft-post/150/1" class="btn btn-icon-text">More details</a>
       </div>
     </div>
+third_column_content:
+  type: string
+  textarea: true
+  default: ""
 fourth_column_content:
   type: string
   textarea: true
@@ -163,19 +153,19 @@ second_column_size:
   default: "auto"
 third_column_size:
   type: string
-  default: "auto"
+  default: ""
 fourth_column_size:
   type: string
   default: ""
 first_column_icon:
   type: string
-  default: "gear"
+  default: ""
 second_column_icon:
   type: string
-  default: "https://d11a6trkgmumsb.cloudfront.net/original/3X/b/3/b33be9538df3547fcf9d1a51a4637d77392ac6f9.png"
+  default: ""
 third_column_icon:
   type: string
-  default: "wrench"
+  default: ""
 fourth_column_icon:
   type: string
   default: ""
