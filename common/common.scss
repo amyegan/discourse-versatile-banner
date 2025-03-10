@@ -312,3 +312,28 @@
     transition: max-height 0.5s ease;
   }
 }
+
+//-------------------------- Other Customizations -------------------------//
+//                    Modified here for partners category
+//-------------------------------------------------------------------------//
+
+////////////// Cards //////////////
+
+.banner-box .row .single-box {
+   & > div {
+       height: calc(100% - 2em);
+   }
+
+   .card {
+       height: 100%;
+       display: flex;
+       flex-direction: column;
+       border: 1px solid var(--primary-200);
+       border-radius: var(--d-border-radius-large);
+       padding: 1em;
+   }
+
+   .buttons {
+       margin-top: auto;
+   }
+}
