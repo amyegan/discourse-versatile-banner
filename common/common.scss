@@ -174,6 +174,10 @@
 .category-header {
   #main .banner-box {
     margin: 20px auto;
+
+    .container {
+        padding: 0;
+    }
   }
 }
 
@@ -336,4 +340,10 @@
    .buttons {
        margin-top: auto;
    }
+}
+
+////////////// Banner padding alignment //////////////
+
+#main .banner-box .container {
+    padding: 0;
 }
