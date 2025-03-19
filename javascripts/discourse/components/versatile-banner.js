@@ -18,8 +18,8 @@ export default class VersatileBanner extends Component {
       ? this.collapsedFromCookie
       : this.isDefaultCollapsed;
 
-  cookieClosed = cookie("banner_closed_" + settings.cookie_name) || cookie();
-  cookieCollapsed = cookie("banner_collapsed_" + settings.cookie_name);
+  cookieClosed = cookie("card_banner_closed") || cookie();
+  cookieCollapsed = cookie("card_banner_collapsed");
   isDefaultCollapsed = settings.default_collapsed_state === "collapsed";
   collapsedFromCookie = this.cookieCollapsed
     ? JSON.parse(this.cookieCollapsed).collapsed
@@ -49,8 +49,8 @@ export default class VersatileBanner extends Component {
 
   get cookieExpirationDate() {
     if (settings.cookie_lifespan === "none") {
-      removeCookie("banner_closed_" + settings.cookie_name, { path: "/" });
-      removeCookie("banner_collapsed_" + settings.cookie_name, { path: "/" });
+      removeCookie("card_banner_closed", { path: "/" });
+      removeCookie("card_banner_collapsed", { path: "/" });
     } else {
       return moment().add(1, settings.cookie_lifespan).toDate();
     }
@@ -104,7 +104,7 @@ export default class VersatileBanner extends Component {
 
     if (this.cookieExpirationDate) {
       const bannerState = { name: settings.cookie_name, closed: "true" };
-      cookie("banner_closed_" + settings.cookie_name, JSON.stringify(bannerState), {
+      cookie("card_banner_closed", JSON.stringify(bannerState), {
         expires: this.cookieExpirationDate,
         path: "/",
       });
@@ -128,7 +128,7 @@ export default class VersatileBanner extends Component {
       bannerState.collapsed = this.bannerCollapsed;
     }
 
-    cookie("banner_collapsed_" + settings.cookie_name, JSON.stringify(bannerState), {
+    cookie("card_banner_collapsed", JSON.stringify(bannerState), {
       expires: this.cookieExpirationDate,
       path: "/",
     });
