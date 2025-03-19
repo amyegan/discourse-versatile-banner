@@ -1,10 +1,10 @@
 @if $display_on_desktop == "false" {
-  .desktop-view .banner-box {
+  .desktop-view .bulletin-box {
     display: none !important;
   }
 }
 @if $display_on_mobile == "false" {
-  .mobile-view .banner-box {
+  .mobile-view .bulletin-box {
     display: none !important;
   }
 }
@@ -44,7 +44,7 @@
   }
 }
 
-.banner-box {
+.bulletin-box {
   width: $large-width;
   max-width: calc(100% - 16px);
   margin: 0 auto;
@@ -172,7 +172,7 @@
 
 // Category Banners Tweaks
 .category-header {
-  #main .banner-box {
+  #main .bulletin-box {
     margin: 20px auto;
 
     .container {
@@ -238,7 +238,7 @@
 ////////////// Full Width //////////////
 
 @if $full_width_banner == "true" {
-  #main .banner-box {
+  #main .bulletin-box {
     width: unset;
     max-width: unset;
     margin: 0;
@@ -251,7 +251,7 @@
 
   // Category Banners Tweaks
   .category-header {
-    #main .banner-box {
+    #main .bulletin-box {
       margin: 0;
     }
   }
@@ -259,11 +259,11 @@
 
 @media screen and (max-width: 736px) {
   // Wrap columns
-  .banner-box .row {
+  .bulletin-box .row {
     display: block;
   }
 
-  .banner-box .section-header .x-title {
+  .bulletin-box .section-header .x-title {
     padding: 15px;
     margin-top: 1em;
   }
@@ -296,7 +296,7 @@
 }
 
 .above-main-container-outlet.banner-themes {
-  .banner-box {
+  .bulletin-box {
     margin-bottom: 1.5em;
   }
 }
@@ -323,7 +323,7 @@
 
 ////////////// Cards //////////////
 
-.banner-box .row .single-box {
+.bulletin-box .row .single-box {
    & > div {
        height: calc(100% - 2em);
    }
@@ -344,7 +344,7 @@
 
 ////////////// Banner padding alignment //////////////
 
-#main .banner-box .container.container {
+#main .bulletin-box .container.container {
     padding: 0 ;
 }
 

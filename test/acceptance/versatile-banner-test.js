@@ -6,13 +6,13 @@ acceptance("Versatile Banner - Logged out", function () {
   test("banner can be hidden from anons", async function (assert) {
     settings.show_for_anon = false;
     await visit("/");
-    assert.dom(".banner-box").doesNotExist("hides the banner for anons");
+    assert.dom(".bulletin-box").doesNotExist("hides the banner for anons");
   });
 
   test("banner can be shown to anons", async function (assert) {
     settings.show_for_anon = true;
     await visit("/");
-    assert.dom(".banner-box").exists("shows the banner for anons");
+    assert.dom(".bulletin-box").exists("shows the banner for anons");
   });
 });
 
@@ -22,13 +22,13 @@ acceptance("Versatile Banner - Logged in", function (needs) {
   test("banner can be hidden from members", async function (assert) {
     settings.show_for_members = false;
     await visit("/");
-    assert.dom(".banner-box").doesNotExist("hides the banner for members");
+    assert.dom(".bulletin-box").doesNotExist("hides the banner for members");
   });
 
   test("banner can be shown to members", async function (assert) {
     settings.show_for_members = true;
     await visit("/");
-    assert.dom(".banner-box").exists("shows the banner for members");
+    assert.dom(".bulletin-box").exists("shows the banner for members");
   });
 });
 
@@ -39,20 +39,20 @@ acceptance("Versatile Banner - Routing", function () {
   test("banner is visible on the homepage", async function (assert) {
     settings.display_on_homepage = true;
     await visit("/");
-    assert.dom(".banner-box").exists("shows the banner on the homepage");
+    assert.dom(".bulletin-box").exists("shows the banner on the homepage");
   });
 
   test("banner is hidden from the homepage", async function (assert) {
     settings.display_on_homepage = false;
     await visit("/");
-    assert.dom(".banner-box").doesNotExist("hides the banner on the homepage");
+    assert.dom(".bulletin-box").doesNotExist("hides the banner on the homepage");
   });
 
   test("banner is visible on a set route", async function (assert) {
     settings.display_on_homepage = false;
     await visit("/c/1");
 
-    assert.dom(".banner-box").exists("shows the banner on the /c/* route");
+    assert.dom(".bulletin-box").exists("shows the banner on the /c/* route");
   });
 
   test("banner is not visible on other routes", async function (assert) {
@@ -60,7 +60,7 @@ acceptance("Versatile Banner - Routing", function () {
     await visit("/u");
 
     assert
-      .dom(".banner-box")
+      .dom(".bulletin-box")
       .doesNotExist("does not show the banner on the /u route");
   });
 });
@@ -102,7 +102,7 @@ acceptance("Versatile Banner - Visibility", function () {
     document.cookie = `banner_collapsed=${encodedCookieValue}; path=/;`;
 
     await visit("/");
-    await click(".banner-box button.toggle");
+    await click(".bulletin-box button.toggle");
 
     assert
       .dom(".--banner-collapsed")
@@ -114,8 +114,8 @@ acceptance("Versatile Banner - Visibility", function () {
     settings.cookie_lifespan = "none";
 
     await visit("/");
-    await click(".banner-box button.close");
+    await click(".bulletin-box button.close");
 
-    assert.dom(".banner-box").doesNotExist("the banner can be dismissed");
+    assert.dom(".bulletin-box").doesNotExist("the banner can be dismissed");
   });
 });
