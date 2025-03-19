@@ -47,8 +47,7 @@
 .bulletin-box {
   width: $large-width;
   max-width: calc(100% - 16px);
-  margin: 0 auto;
-  margin-top: 20px;
+  margin: 20px auto;
   color: var(--banner-primary-text);
   position: relative;
   background-image: var(--banner-bg-img);
