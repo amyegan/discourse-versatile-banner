@@ -11,7 +11,7 @@ export default class VersatileBanner extends Component {
   @service router;
   @service site;
   @service currentUser;
-  @tracked bannerClosed = this.cookieClosed || false;
+  @tracked bannerClosed = this.closedFromCookie || false;
   @tracked
   bannerCollapsed =
     this.collapsedFromCookie !== null
@@ -23,6 +23,9 @@ export default class VersatileBanner extends Component {
   isDefaultCollapsed = settings.default_collapsed_state === "collapsed";
   collapsedFromCookie = this.cookieCollapsed
     ? JSON.parse(this.cookieCollapsed).collapsed
+    : null;
+  closedFromCookie = (this.cookieClosed  && JSON.parse(this.cookieClosed).name === settings.cookie_name)
+    ? JSON.parse(this.cookieClosed).closed
     : null;
   columnData = [
     {
